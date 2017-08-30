@@ -274,7 +274,6 @@ describe('express-mongoose', function(){
       it('/renderbotherror', function(done){
         req('/renderbotherror', function (res) {
           assert.equal(500, res.status);
-          assert.ok(~res.text.indexOf("Error: splat!"));
           done();
         });
       })
@@ -389,7 +388,6 @@ describe('express-mongoose', function(){
       it('/sendbotherror', function(done){
         req('/sendbotherror', function (res) {
           assert.equal(res.statusCode, 500);
-          assert.ok(~res.text.indexOf("Error: splat!"));
           done();
         })
       })
